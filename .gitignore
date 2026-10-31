@@ -76,6 +76,14 @@ docs/_build/
 .pybuilder/
 target/
 
+# Local demo outputs and downloaded clips. Do not commit datasets or weights.
+/runs/
+/data/
+*.mp4
+*.pth
+*.pt
+*.onnx
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
