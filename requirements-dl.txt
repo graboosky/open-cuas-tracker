@@ -1,0 +1,10 @@
+# Optional learned detector. Install on top of requirements.txt.
+# Google Colab and Kaggle already provide torch. Do not reinstall torch there
+# or you can lose the free GPU build.
+#
+#   pip install -r requirements-dl.txt
+#
+# This pulls RF-DETR Nano/Small/Medium/Large (Apache-2.0 code and weights).
+# Do not install rfdetr[plus]. Atto, Femto, Pico, XL and 2XL detection weights
+# are under the Roboflow Platform Model License 1.0, which is not Apache-2.0.
+rfdetr[train]

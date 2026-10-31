@@ -1,0 +1,8 @@
+# CPU demo dependencies. No torch, no dataset files, no weights.
+numpy>=2,<3
+opencv-python-headless>=4.8
+pillow>=10
+matplotlib>=3.8
+huggingface_hub>=0.26
+pyarrow>=15
+pytest>=8

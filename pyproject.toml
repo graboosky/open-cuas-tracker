@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-cuas-tracker"
+version = "0.1.0"
+description = "Permissively licensed drone detection and tracking research pipeline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{name = "open-cuas-tracker contributors"}]
+dependencies = [
+  "numpy>=2,<3",
+  "opencv-python-headless>=4.8",
+  "pillow>=10",
+  "matplotlib>=3.8",
+  "huggingface_hub>=0.26",
+  "pyarrow>=15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+# RF-DETR Nano/Small/Medium/Large weights are Apache-2.0.
+# Do not install rfdetr[plus]: Atto, Femto, Pico, XL and 2XL detection are PML-1.0.
+learned = ["rfdetr"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
